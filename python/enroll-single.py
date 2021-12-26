@@ -26,7 +26,7 @@ args = parser.parse_args()
 ##  Execution
 ##-----------------------------------------------------------------------------
 start = time()
-args.file = "../CASIA1/001_1_1.jpg"
+#args.file = "../CASIA1/001_1_1.jpg"
 
 # Extract feature
 print('>>> Enroll for the file ', args.file)
