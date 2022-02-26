@@ -46,12 +46,12 @@ def extractFeature(im_filename, eyelashes_thres=80, use_multiprocess=True):
 	im = cv2.imread(im_filename, 0)
 	ciriris, cirpupil, imwithnoise = segment(im, eyelashes_thres, use_multiprocess)
 	
-	print(ciriris)
-	print(cirpupil)
 	img_ciriris = cv2.circle(im, (ciriris[1].astype(int), ciriris[0].astype(int)), ciriris[2].astype(int), (255, 0, 0), 3)
 	img_cirpupil = cv2.circle(im, (cirpupil[1].astype(int), cirpupil[0].astype(int)), cirpupil[2].astype(int), (0, 255, 0), 3)
 	cv2.imshow("img_cirpupil", img_cirpupil)
 	k = cv2.waitKey(0)
+	cv2.destroyAllWindows()
+
 
 	# Perform normalization
 	polar_array, noise_array = normalize(imwithnoise, ciriris[1], ciriris[0], ciriris[2],
