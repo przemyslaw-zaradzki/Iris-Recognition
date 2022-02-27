@@ -47,7 +47,7 @@ if(args.camera_input=="True"):
                 print('>>> Enroll for the file ', file)
                 template, mask, file = extractFeature(file)
 
-                print("Do you want to save this iris code? Y/N")
+                print("Do you want to save the code for this image of the iris? Y/N")
                 answer = input()
                 while(answer!="Y" and answer!="N"):
                     answer = input()
@@ -62,7 +62,7 @@ else:
     print('>>> Enroll for the file ', args.file)
     template, mask, file = extractFeature(args.file)
 
-    print("Do you want to save this iris code? Y/N")
+    print("Do you want to save the code for this image of the iris? Y/N")
     answer = input()
     while(answer!="Y" and answer!="N"):
         answer = input()
